@@ -22,18 +22,20 @@ Sponsor: [MeloMed](https://melomed.io). Developer guide: [melomed.io/developers]
 
 ## Path A: no install, 5 minutes
 
-You only need a browser and an account on a web AI builder. No terminal.
+You only need a browser and an AI builder. With v0 or Replit there is no terminal at all. Claude Code and Cursor also work here if you already have one of them set up.
 
-**The data link:** `https://raw.githubusercontent.com/MeloMed-io/melomed-hack-starter/main/public/maya.json`
+**The data link:** [https://raw.githubusercontent.com/MeloMed-io/melomed-hack-starter/main/public/maya.json](https://raw.githubusercontent.com/MeloMed-io/melomed-hack-starter/main/public/maya.json)
 
-1. Open the link above in a new tab. You will see a page of text that starts with `"about"`. That is all of Maya's data.
+1. Open the link above in a new tab. You will see a page of text that starts with `{ "about":`. That is all of Maya's data.
 2. Open your builder (v0, Replit, Claude Code or Cursor) and start a new project.
-3. Copy the prompt for your builder below, paste it in, and send it.
-4. If the builder says it cannot load the link, go back to the tab from step 1, select all, copy, and paste the text into the chat with: "Use this JSON as the data instead of fetching it."
+3. Copy the prompt for your builder below (hover over the box on GitHub and click the copy icon in its corner), paste it in, and send it.
+4. If the builder says it cannot load the link, go back to the tab from step 1, select all, copy, and paste the text (about 45 KB) into the chat with: "Use this JSON as the data instead of fetching it."
+
+The link works from any web page: it allows cross-origin requests, so `fetch(url).then(r => r.json())` runs in the browser with no proxy.
 
 ### What is in the file
 
-One file, five lists. Every item has a `date` (like `2026-11-17`) and a `dayOffset` (0 = today, -1 = yesterday, 4 = four days from now). In the file, today is **2026-11-17**, the day of the hackathon.
+One file, four lists. Tasks have a `due` date, and moods, entries and songs have a `date`, all written like `2026-11-17`. Every item also has a `dayOffset` (0 = today, -1 = yesterday, 4 = four days from now). Tasks with no date have `due` and `dayOffset` set to `null`. In the file, today is **2026-11-17**, the day of the hackathon.
 
 | Key | One item looks like |
 |---|---|
@@ -49,46 +51,58 @@ Plus `about` (a plain-words description), `today`, `timezone` and `person`.
 - `priority` is `"none"`, `"medium"` or `"high"`. `due` is `null` for tasks with no date.
 - `overdue` is true when a task is past its date and still not done.
 - `apathy` is how Nocturne labels tired days.
+- Compare dates as plain text (`task.due === mood.date`). Do not turn `"2026-11-17"` into a `Date` with `new Date("2026-11-17")`. That reads it as midnight UTC, which is still Nov 16 in New York, so every label shifts back a day. To step through days, use `new Date(today + "T12:00:00Z")` with `setUTCDate` and `toISOString().slice(0, 10)`.
 
 ### Prompt for v0
 
 ```text
-Build a single-page React app called "Maya's Week". Fetch JSON from https://raw.githubusercontent.com/MeloMed-io/melomed-hack-starter/main/public/maya.json when the page loads.
-The JSON has: today (a date string), tasks (title, due, dueTime, priority, done, overdue, dayOffset),
+Build a single-page React app called "Maya's Week". When the page loads, fetch JSON from this URL:
+https://raw.githubusercontent.com/MeloMed-io/melomed-hack-starter/main/public/maya.json
+The JSON has: today (a "YYYY-MM-DD" string), tasks (title, due, dueTime, priority, done, overdue, dayOffset),
 and moods (date, valence from -1 to 1, topEmotions, an array of words).
-Show 14 rows, from 6 days before `today` to 7 days after. Each row shows the date, that day's mood
-(find the item in moods with the same date, draw valence as a small bar that is green above 0 and
-red below 0, and list topEmotions), and every task whose `due` equals that date. Strike through
-tasks where done is true. Mark tasks where overdue is true as "missed". Put a red "!" before
-tasks with priority "high". Highlight the row for `today`. If a day has no item in moods, show
-"No journal entry". Add a footer: "Maya Chen is fictional demo data. Mood is a pattern, not a diagnosis."
+Show 14 rows, from 6 days before `today` to 7 days after. Treat every date as a "YYYY-MM-DD" string.
+To build the 14 dates, start from new Date(today + "T12:00:00Z"), step with setUTCDate, and format
+with toISOString().slice(0, 10). Never use new Date(today) with local getters, it shows the day before.
+Each row shows the weekday and date, that day's mood (find the item in moods with the same date,
+draw valence as a small bar that is green above 0 and red below 0, and list topEmotions), and every
+task whose `due` equals that date. Strike through tasks where done is true. Mark tasks where overdue
+is true as "missed". Put a red "!" before tasks with priority "high". Highlight the row for `today`.
+For a day up to and including today with no item in moods, show "No journal entry". For days after
+today, leave the mood area empty. Add a footer: "Maya Chen is fictional demo data. Mood is a pattern, not a diagnosis."
 ```
 
 ### Prompt for Claude Code or Cursor
 
 ```text
 Make a calm, friendly web app called "Start Here" that helps a student pick what to do first today.
-Load the data from https://raw.githubusercontent.com/MeloMed-io/melomed-hack-starter/main/public/maya.json. Use these fields only:
-- today: the current date
-- tasks: title, due, dueTime, priority, done, overdue
+Make it one index.html file that I can open in a browser. Load the data with fetch from this URL:
+https://raw.githubusercontent.com/MeloMed-io/melomed-hack-starter/main/public/maya.json
+Use these fields only:
+- today: the current date, a "YYYY-MM-DD" string
+- tasks: title, due ("YYYY-MM-DD" or null), dueTime ("HH:MM" or null), priority ("none", "medium" or "high"), done, overdue
 - moods: date, valence (from -1 unpleasant to 1 pleasant), topEmotions
-Main screen: the tasks where due equals today and done is false, plus any task where overdue is true.
-Above them, a small card with the last 3 items in moods (by date, up to today) showing the date,
+Compare dates as strings, never through new Date().
+Main screen: the tasks where due equals today and done is false, plus every task where overdue is true.
+Above them, a small card with the last 3 items in moods with date up to today, showing the date,
 valence as a colored dot, and topEmotions. If the average valence of those 3 days is below 0,
-suggest starting with the shortest-looking task. Otherwise suggest the task with priority "high"
-or the earliest dueTime. Explain the suggestion in one short sentence. Never call mood a diagnosis
-or a health score. Say in the footer that Maya Chen is fictional demo data.
+suggest the main-screen task with the shortest title, as a small win. Otherwise sort the main-screen
+tasks by priority (high, then medium, then none), then by due date, then by dueTime, and suggest the
+first one. Explain the suggestion in one short sentence. Never call mood a diagnosis or a health
+score. Say in the footer that Maya Chen is fictional demo data.
 ```
 
 ### Prompt for Replit
 
 ```text
 Create a small web app (plain HTML, CSS and JavaScript is fine) called "Mood Mixtape".
-Fetch JSON from https://raw.githubusercontent.com/MeloMed-io/melomed-hack-starter/main/public/maya.json. It has:
+Fetch JSON from this URL:
+https://raw.githubusercontent.com/MeloMed-io/melomed-hack-starter/main/public/maya.json
+It has:
 - songs: date, title, artist, pickedBy, entryId
 - moods: date, valence (from -1 to 1), topEmotions
-For each item in songs, find the item in moods with the same date. Make two playlists:
-"Good days" (songs on days with valence above 0.3) and "Hard days" (valence below 0).
+For each item in songs, find the item in moods with the same date (compare the date strings).
+Make two playlists: "Good days" (songs on days with valence above 0.3) and "Hard days"
+(valence below 0). Songs from in-between days go in neither list.
 Show each song as a card with title, artist, the date and that day's topEmotions.
 Add a button that copies a playlist as plain text, one "title - artist" per line.
 Footer: "Maya Chen is fictional demo data from the MeloMed hack starter."
@@ -100,6 +114,8 @@ Want the to-do list and the mood list in one idea? Ask your builder to "join `ta
 
 Both servers are on npm and run in demo mode with Maya's data. No accounts, no sign-in, no network once installed. Dates are relative to the moment you start them, so in Path B "today" is the real today.
 
+**Before you start:** run `node -v` in a terminal. You need `v20` or higher. If the command is not found or the number is lower, install the LTS version from [nodejs.org](https://nodejs.org), then close and reopen your terminal and your AI app so they see it.
+
 ```sh
 npx -y 2dood-mcp --demo
 npx -y nocturne-mcp --demo
@@ -107,7 +123,7 @@ npx -y nocturne-mcp --demo
 
 You do not run these yourself. Your AI app starts them. Pick your app:
 
-**Claude Desktop, Cursor and other apps that read `mcpServers` JSON.** Add this to the app's MCP config (Claude Desktop: Settings, Developer, Edit Config. Cursor: `~/.cursor/mcp.json`), then restart the app. The same block is in `claude_desktop_config.example.json`.
+**Claude Desktop, Cursor and other apps that read `mcpServers` JSON.** Open the app's MCP config (Claude Desktop: Settings, Developer, Edit Config. Cursor: Settings, MCP, or the file `~/.cursor/mcp.json`). If the file is empty, paste the block below as it is. If it already has an `"mcpServers"` section, copy only the two entries (`"2dood-demo"` and `"nocturne-demo"`) into it, with a comma between entries. Save, then quit and reopen the app. The same block is in `claude_desktop_config.example.json`.
 
 ```json
 {
@@ -131,6 +147,10 @@ claude mcp add 2dood-demo -s user -- npx -y 2dood-mcp --demo
 claude mcp add nocturne-demo -s user -- npx -y nocturne-mcp --demo
 ```
 
+Run `claude mcp list` to check that both show as connected. `-s user` makes them available in every folder. When the hackathon is over, remove them with `claude mcp remove 2dood-demo -s user` and `claude mcp remove nocturne-demo -s user`.
+
+**On Windows (not WSL):** apps cannot start `npx` directly. In the JSON block, use `"command": "cmd"` and put `"/c", "npx"` at the front of `args`, like `"args": ["/c", "npx", "-y", "2dood-mcp", "--demo"]`. In Claude Code, add `cmd /c` after the `--`, like `claude mcp add 2dood-demo -s user -- cmd /c npx -y 2dood-mcp --demo`.
+
 Then ask something like "compare my mood with my deadlines this month" or "plan my next 4 days around my exam".
 
 ### Tools
@@ -142,16 +162,22 @@ Then ask something like "compare my mood with my deadlines this month" or "plan 
 
 ### Code it yourself (TypeScript starter)
 
-You need Node.js 20 or newer.
+You need Node.js 20 or newer (see "Before you start" above) and git. Get the code first, then run the examples from inside the folder:
 
 ```sh
+git clone https://github.com/MeloMed-io/melomed-hack-starter.git
+cd melomed-hack-starter
 npm install
 npm run week      # last 7 days and next 7, mood next to tasks
 npm run stress    # mood before and after each big deadline
 npm run agent     # Claude plans your week with both servers (needs ANTHROPIC_API_KEY)
 ```
 
-All code that talks to the servers is in `src/connect.ts`. It starts both servers and gives you one function:
+No git? On the GitHub page, click Code, then Download ZIP, unzip it, and open a terminal in that folder. If `npm install` prints warnings about install scripts or funding, you can ignore them. The first `npm run week` takes a few extra seconds while `npx` downloads the two servers.
+
+To run example 3, set your own key in the same terminal first. On macOS and Linux: `export ANTHROPIC_API_KEY=sk-ant-...`. In Windows PowerShell: `$env:ANTHROPIC_API_KEY="sk-ant-..."`. Without a key it prints a short note and exits, and examples 1 and 2 still work.
+
+All code that talks to the servers is in `src/connect.ts`. It starts both servers and gives you one function. Save this as `mine.ts` in the repo folder and run it with `npx tsx mine.ts`:
 
 ```ts
 import { connect } from './src/connect.ts'
@@ -159,6 +185,7 @@ import { connect } from './src/connect.ts'
 const servers = await connect()
 const text = await servers.callTool('twodood', 'list_tasks', { view: 'week' })
 const mood = await servers.callTool('nocturne', 'get_mood_timeline', { bucket: 'day' })
+console.log(text, mood)
 await servers.close()
 ```
 
@@ -179,6 +206,8 @@ To see the web example, serve the repo folder and open the page:
 python3 -m http.server 8000
 # then open http://localhost:8000/examples/web/index.html
 ```
+
+On Windows, use `py -m http.server 8000` instead. No Python? `npx -y serve -l 8000 .` does the same job with Node.
 
 To point it at the hosted file instead, add `?src=https://raw.githubusercontent.com/MeloMed-io/melomed-hack-starter/main/public/maya.json` to the address.
 
@@ -205,7 +234,7 @@ Each one fits in about an hour and uses the data for real. Pick one, or mash two
 **Wellness, life and productivity track**
 
 1. **Start here card.** Today's tasks plus the last 3 days of mood, and one line on which task to start with and why.
-2. **Exam runway.** Count back from CHEM 201 exam 2 and lay out study blocks, putting the hard ones on the kind of days that usually feel best (climbing days).
+2. **Exam runway.** Count back from CHEM 201 exam 2 and lay out study blocks, putting the hard ones on the kind of days that usually feel best (climbing days). Moods only go up to today, so average past moods by their `weekday` to guess which future days feel good.
 3. **Gentle rescheduler.** When the last few moods trend low and the list is long, offer to push the tasks that are not urgent back a day, one tap to accept.
 
 **Open track (any consumer idea)**
