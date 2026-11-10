@@ -249,6 +249,13 @@ Each team can win one prize.
 
 **Grand prize: an AirTag for every member of the winning team** (from WinC).
 
+How the grand prize is judged:
+
+- **Real use case.** A real person has this problem, and your project actually solves it.
+- **Works live.** The demo runs on the day.
+- **Fresh idea.** Not a copy of an app everyone already uses.
+- **Clear pitch.** In 60 seconds, we get what it does and who it is for.
+
 **MeloMed prize: best use of the 2DooD or Nocturne tools.** A cute animal phone stand for every member of the winning team. Both the JSON link (Path A) and the real MCP servers (Path B) count. Real MCP use gets extra credit.
 
 How the MeloMed prize is judged:
