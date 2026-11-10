@@ -1,0 +1,1909 @@
+{
+  "about": "Fictional demo data for the MeloMed hackathon starter. Maya Chen is a made-up college sophomore (biology major, climbs and runs), not a real person. tasks come from 2DooD, her to-do app. moods, entries and songs come from Nocturne, her journal app. Every date is written as if today is 2026-11-17. dayOffset is days from today (0 = today, -1 = yesterday, 4 = in four days). Mood is an automatic read of journal writing: valence runs from -1 (unpleasant) to 1 (pleasant), arousal from -1 (calm) to 1 (energized). The label \"apathy\" is how Nocturne marks tired days. Treat mood as a pattern for the person to look at, never a diagnosis. moods has one item per day that has a journal entry. Days with no entry are left out. Journal text is private and is not included.",
+  "generatedFor": "2026-11-17",
+  "today": "2026-11-17",
+  "timezone": "America/New_York",
+  "person": {
+    "name": "Maya Chen",
+    "fictional": true,
+    "description": "College sophomore, biology major, climbs and runs"
+  },
+  "tasks": [
+    {
+      "id": "69654691-8b29-487a-a0e7-eb0c0c29dc8c",
+      "title": "Climbing gym",
+      "due": "2026-10-06",
+      "dueTime": "18:00",
+      "weekday": "Tue",
+      "dayOffset": -42,
+      "priority": "none",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "57f44a66-7258-4399-97cb-7e8d56551072",
+      "title": "BIO 210 read ch 1 and 2",
+      "due": "2026-10-06",
+      "dueTime": "23:59",
+      "weekday": "Tue",
+      "dayOffset": -42,
+      "priority": "none",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "ae4e08c4-7162-4e82-8ede-68e029fb6b1e",
+      "title": "Climbing gym",
+      "due": "2026-10-08",
+      "dueTime": "18:00",
+      "weekday": "Thu",
+      "dayOffset": -40,
+      "priority": "none",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "cc2cfd4d-bf15-4b24-bf09-81df37889033",
+      "title": "CHEM 201 problem set 1",
+      "due": "2026-10-10",
+      "dueTime": "23:59",
+      "weekday": "Sat",
+      "dayOffset": -38,
+      "priority": "medium",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "a921ef1c-bd7b-4b4c-b42a-d7ad472fbddd",
+      "title": "Long run",
+      "due": "2026-10-11",
+      "dueTime": "08:00",
+      "weekday": "Sun",
+      "dayOffset": -37,
+      "priority": "none",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "8ea2d909-acb6-4653-8ee7-c6a7d8132083",
+      "title": "Call mom",
+      "due": "2026-10-11",
+      "dueTime": "19:00",
+      "weekday": "Sun",
+      "dayOffset": -37,
+      "priority": "none",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "d2dd827c-fd90-4850-aa94-de7cad5ac038",
+      "title": "Climbing gym",
+      "due": "2026-10-13",
+      "dueTime": "18:00",
+      "weekday": "Tue",
+      "dayOffset": -35,
+      "priority": "none",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "a7465b77-1f94-46f5-af06-0bc9dcc641d0",
+      "title": "ENG 105 personal essay draft",
+      "due": "2026-10-13",
+      "dueTime": "23:59",
+      "weekday": "Tue",
+      "dayOffset": -35,
+      "priority": "medium",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "7a05749f-6f7f-4f22-bb0a-00e5c5f8a75f",
+      "title": "BIO 210 lab 1 prelab",
+      "due": "2026-10-15",
+      "dueTime": "09:00",
+      "weekday": "Thu",
+      "dayOffset": -33,
+      "priority": "none",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "012e6f70-3cba-455f-bdfb-c9916d2c4ba1",
+      "title": "Climbing gym",
+      "due": "2026-10-15",
+      "dueTime": "18:00",
+      "weekday": "Thu",
+      "dayOffset": -33,
+      "priority": "none",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "929cb642-8fd1-4434-ab9f-6d095c7a3390",
+      "title": "CHEM 201 problem set 2",
+      "due": "2026-10-17",
+      "dueTime": "23:59",
+      "weekday": "Sat",
+      "dayOffset": -31,
+      "priority": "medium",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "5da07d13-67cb-436e-a0d5-0c42c5ba9fbc",
+      "title": "Long run",
+      "due": "2026-10-18",
+      "dueTime": "08:00",
+      "weekday": "Sun",
+      "dayOffset": -30,
+      "priority": "none",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "b99b1c19-fa9d-45ee-be81-5ec5e2a556bc",
+      "title": "Call mom",
+      "due": "2026-10-18",
+      "dueTime": "19:00",
+      "weekday": "Sun",
+      "dayOffset": -30,
+      "priority": "none",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "746879e5-651d-451d-ad73-56c5812046ce",
+      "title": "Climbing gym",
+      "due": "2026-10-20",
+      "dueTime": "18:00",
+      "weekday": "Tue",
+      "dayOffset": -28,
+      "priority": "none",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "a24f4c55-a97d-49c5-adcf-c5b2cfe23663",
+      "title": "ENG 105 personal essay final",
+      "due": "2026-10-20",
+      "dueTime": "23:59",
+      "weekday": "Tue",
+      "dayOffset": -28,
+      "priority": "high",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "578332ad-0cee-4111-9379-f36080c84d87",
+      "title": "Climbing gym",
+      "due": "2026-10-22",
+      "dueTime": "18:00",
+      "weekday": "Thu",
+      "dayOffset": -26,
+      "priority": "none",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "73e5a411-515b-402a-b1b0-75a9457c7372",
+      "title": "CHEM 201 problem set 3",
+      "due": "2026-10-22",
+      "dueTime": "23:59",
+      "weekday": "Thu",
+      "dayOffset": -26,
+      "priority": "medium",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "4e21d0e9-185d-456b-8e61-a2bd331796dd",
+      "title": "CHEM 201 midterm review sheet",
+      "due": "2026-10-24",
+      "dueTime": "23:59",
+      "weekday": "Sat",
+      "dayOffset": -24,
+      "priority": "high",
+      "done": true,
+      "overdue": false,
+      "notes": "Chapters 1 to 6. Kinetics is the weak spot."
+    },
+    {
+      "id": "f9e2b420-39fe-4b49-ad17-16a4cbe161ca",
+      "title": "Long run",
+      "due": "2026-10-25",
+      "dueTime": "08:00",
+      "weekday": "Sun",
+      "dayOffset": -23,
+      "priority": "none",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "c926ec96-5ec2-45c6-ba3a-947ef38af7ac",
+      "title": "CHEM 201 office hours",
+      "due": "2026-10-25",
+      "dueTime": "15:00",
+      "weekday": "Sun",
+      "dayOffset": -23,
+      "priority": "none",
+      "done": true,
+      "overdue": false,
+      "notes": "Bring the rate law questions."
+    },
+    {
+      "id": "aae48d9d-e092-4771-abe1-575ad8cf9dc8",
+      "title": "Call mom",
+      "due": "2026-10-25",
+      "dueTime": "19:00",
+      "weekday": "Sun",
+      "dayOffset": -23,
+      "priority": "none",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "2951d518-d839-44a7-850b-172f5ecc3589",
+      "title": "CHEM 201 practice midterm",
+      "due": "2026-10-26",
+      "dueTime": "20:00",
+      "weekday": "Mon",
+      "dayOffset": -22,
+      "priority": "high",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "1d482a3a-ad97-40ff-a42b-bbf425265ddc",
+      "title": "CHEM 201 midterm",
+      "due": "2026-10-27",
+      "dueTime": "10:00",
+      "weekday": "Tue",
+      "dayOffset": -21,
+      "priority": "high",
+      "done": true,
+      "overdue": false,
+      "notes": "Science hall room 210. Calculator and two pencils."
+    },
+    {
+      "id": "c1ba492f-2950-4c96-bc58-ed14c937b950",
+      "title": "Climbing gym",
+      "due": "2026-10-27",
+      "dueTime": "18:00",
+      "weekday": "Tue",
+      "dayOffset": -21,
+      "priority": "none",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "ce761151-eecc-4742-844e-5af04bac4d45",
+      "title": "Climbing gym",
+      "due": "2026-10-29",
+      "dueTime": "18:00",
+      "weekday": "Thu",
+      "dayOffset": -19,
+      "priority": "none",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "714f8d7b-c378-4173-b1c3-d955b1026c2d",
+      "title": "ENG 105 reading response ch 3",
+      "due": "2026-10-31",
+      "dueTime": "23:59",
+      "weekday": "Sat",
+      "dayOffset": -17,
+      "priority": "none",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "e508832a-bd77-4d9e-beb6-12a42ed14a98",
+      "title": "Long run",
+      "due": "2026-11-01",
+      "dueTime": "08:00",
+      "weekday": "Sun",
+      "dayOffset": -16,
+      "priority": "none",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "96aef06d-2437-4df8-941e-2c8f778f4002",
+      "title": "Call mom",
+      "due": "2026-11-01",
+      "dueTime": "19:00",
+      "weekday": "Sun",
+      "dayOffset": -16,
+      "priority": "none",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "e0a0b8b9-b382-4557-a0a0-9908ecb12421",
+      "title": "CHEM 201 problem set 4",
+      "due": "2026-11-02",
+      "dueTime": "23:59",
+      "weekday": "Mon",
+      "dayOffset": -15,
+      "priority": "medium",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "7b854437-6619-4808-9340-ceefa31a4742",
+      "title": "Climbing gym",
+      "due": "2026-11-03",
+      "dueTime": "18:00",
+      "weekday": "Tue",
+      "dayOffset": -14,
+      "priority": "none",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "5fcb60b1-a131-4751-97ba-960a0cee2e4c",
+      "title": "Climbing gym",
+      "due": "2026-11-05",
+      "dueTime": "18:00",
+      "weekday": "Thu",
+      "dayOffset": -12,
+      "priority": "none",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "8663442e-5bf4-41d8-89fc-0bc59d3322c7",
+      "title": "BIO 210 lab 2 data analysis",
+      "due": "2026-11-05",
+      "dueTime": "23:59",
+      "weekday": "Thu",
+      "dayOffset": -12,
+      "priority": "medium",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "bf4dbcef-a531-45be-b25c-c46871ac6d08",
+      "title": "ENG 105 peer review comments",
+      "due": "2026-11-07",
+      "dueTime": "23:59",
+      "weekday": "Sat",
+      "dayOffset": -10,
+      "priority": "medium",
+      "done": false,
+      "overdue": true,
+      "notes": null
+    },
+    {
+      "id": "cc892e04-f4ef-4f6d-b449-059d9678c626",
+      "title": "Long run",
+      "due": "2026-11-08",
+      "dueTime": "08:00",
+      "weekday": "Sun",
+      "dayOffset": -9,
+      "priority": "none",
+      "done": false,
+      "overdue": true,
+      "notes": null
+    },
+    {
+      "id": "533a6fdd-c9c7-4140-8cbd-01da7081d3de",
+      "title": "Grocery run",
+      "due": "2026-11-08",
+      "dueTime": "16:00",
+      "weekday": "Sun",
+      "dayOffset": -9,
+      "priority": "none",
+      "done": false,
+      "overdue": true,
+      "notes": null
+    },
+    {
+      "id": "617f3c6b-1829-4f3f-866f-00b5a547d923",
+      "title": "Call mom",
+      "due": "2026-11-08",
+      "dueTime": "19:00",
+      "weekday": "Sun",
+      "dayOffset": -9,
+      "priority": "none",
+      "done": false,
+      "overdue": true,
+      "notes": null
+    },
+    {
+      "id": "abceac2b-8880-40fa-be03-b6a4f5e0af1f",
+      "title": "CHEM 201 problem set 5",
+      "due": "2026-11-08",
+      "dueTime": "23:59",
+      "weekday": "Sun",
+      "dayOffset": -9,
+      "priority": "medium",
+      "done": false,
+      "overdue": true,
+      "notes": "Missed it. Ask the TA if late work gets partial credit."
+    },
+    {
+      "id": "98425ae9-6c9e-4d16-a31a-0a69c529a0c9",
+      "title": "Talk to roommate about the fight",
+      "due": "2026-11-09",
+      "dueTime": "21:00",
+      "weekday": "Mon",
+      "dayOffset": -8,
+      "priority": "none",
+      "done": true,
+      "overdue": false,
+      "notes": "Start with the dishes schedule, not the noise thing. Listen first."
+    },
+    {
+      "id": "a9c20c2d-8a88-4571-a8a5-73537aba12c7",
+      "title": "BIO 210 read ch 7",
+      "due": "2026-11-09",
+      "dueTime": "23:59",
+      "weekday": "Mon",
+      "dayOffset": -8,
+      "priority": "none",
+      "done": false,
+      "overdue": true,
+      "notes": null
+    },
+    {
+      "id": "af5305ac-f2e7-4d75-ad2c-18bd97873380",
+      "title": "Drop-in hours at the campus wellness center",
+      "due": "2026-11-10",
+      "dueTime": "14:00",
+      "weekday": "Tue",
+      "dayOffset": -7,
+      "priority": "none",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "72d1ad79-73a8-4c4f-ae0b-28eee9d16217",
+      "title": "Climbing gym",
+      "due": "2026-11-10",
+      "dueTime": "18:00",
+      "weekday": "Tue",
+      "dayOffset": -7,
+      "priority": "none",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "53ac3c6e-0dcd-4ca3-8e80-0cc16f67fb98",
+      "title": "Email CHEM 201 TA about problem set 5",
+      "due": "2026-11-11",
+      "dueTime": "10:00",
+      "weekday": "Wed",
+      "dayOffset": -6,
+      "priority": "none",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "ebe07da6-8a04-4286-abcc-910e5cc7fe93",
+      "title": "Climbing gym",
+      "due": "2026-11-12",
+      "dueTime": "18:00",
+      "weekday": "Thu",
+      "dayOffset": -5,
+      "priority": "none",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "73e4f3f0-6f8e-4367-805c-194ef6cbdbc2",
+      "title": "ENG 105 reading response ch 5",
+      "due": "2026-11-12",
+      "dueTime": "23:59",
+      "weekday": "Thu",
+      "dayOffset": -5,
+      "priority": "none",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "e3e82c5b-42f2-4cce-a27a-729bf5465dcb",
+      "title": "Make a new weekly plan",
+      "due": "2026-11-13",
+      "dueTime": "18:00",
+      "weekday": "Fri",
+      "dayOffset": -4,
+      "priority": "none",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "55098306-936b-42f7-870d-9f55335cc5b5",
+      "title": "BIO 210 lab report: enzyme kinetics",
+      "due": "2026-11-14",
+      "dueTime": "23:59",
+      "weekday": "Sat",
+      "dayOffset": -3,
+      "priority": "high",
+      "done": true,
+      "overdue": false,
+      "notes": "Turned in a day late, 10 percent off. Next time start the discussion section early."
+    },
+    {
+      "id": "b00f4d01-e169-4856-b02e-cfbafbd4654d",
+      "title": "Long run",
+      "due": "2026-11-15",
+      "dueTime": "08:00",
+      "weekday": "Sun",
+      "dayOffset": -2,
+      "priority": "none",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "2b2fa6ea-2be1-463b-b614-69360ff7dc36",
+      "title": "Pick up package from the mailroom",
+      "due": "2026-11-15",
+      "dueTime": "17:00",
+      "weekday": "Sun",
+      "dayOffset": -2,
+      "priority": "none",
+      "done": false,
+      "overdue": true,
+      "notes": null
+    },
+    {
+      "id": "f8d2b62a-c0e8-42e5-b08d-654758df0897",
+      "title": "Call mom",
+      "due": "2026-11-15",
+      "dueTime": "19:00",
+      "weekday": "Sun",
+      "dayOffset": -2,
+      "priority": "none",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "cdab62e5-7fb1-44f8-a149-893c3e11266c",
+      "title": "CHEM 201 problem set 6",
+      "due": "2026-11-16",
+      "dueTime": "23:59",
+      "weekday": "Mon",
+      "dayOffset": -1,
+      "priority": "medium",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "353b8e8f-6a3c-4367-9ee7-7fea0bd33b6f",
+      "title": "BIO 210 lab 3 prelab",
+      "due": "2026-11-17",
+      "dueTime": "09:00",
+      "weekday": "Tue",
+      "dayOffset": 0,
+      "priority": "none",
+      "done": false,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "f150205f-65e8-4ab9-b3bd-ab3846c35fdf",
+      "title": "Climbing gym",
+      "due": "2026-11-17",
+      "dueTime": "18:00",
+      "weekday": "Tue",
+      "dayOffset": 0,
+      "priority": "none",
+      "done": false,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "6440d48a-d0c3-4d53-8be4-ae893809d61e",
+      "title": "ENG 105 essay 2 outline",
+      "due": "2026-11-17",
+      "dueTime": "23:59",
+      "weekday": "Tue",
+      "dayOffset": 0,
+      "priority": "medium",
+      "done": false,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "05b66381-cc35-4f53-a6c8-da16bd612aa4",
+      "title": "CHEM 201 exam 2 study group",
+      "due": "2026-11-18",
+      "dueTime": "19:00",
+      "weekday": "Wed",
+      "dayOffset": 1,
+      "priority": "none",
+      "done": false,
+      "overdue": false,
+      "notes": "Library, third floor."
+    },
+    {
+      "id": "b3f7a142-b9ff-4dfa-bc3f-4f4badd1adf4",
+      "title": "Resume review at the career center",
+      "due": "2026-11-19",
+      "dueTime": "15:00",
+      "weekday": "Thu",
+      "dayOffset": 2,
+      "priority": "medium",
+      "done": false,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "435eecb5-0588-4c89-ab50-b3eced5fe0b0",
+      "title": "Climbing gym",
+      "due": "2026-11-19",
+      "dueTime": "18:00",
+      "weekday": "Thu",
+      "dayOffset": 2,
+      "priority": "none",
+      "done": false,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "08edb65f-5331-4eed-af92-d66563c395c6",
+      "title": "CHEM 201 practice exam 2",
+      "due": "2026-11-20",
+      "dueTime": "20:00",
+      "weekday": "Fri",
+      "dayOffset": 3,
+      "priority": "high",
+      "done": false,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "0a9aabab-3ea6-4240-94ff-f3387082e052",
+      "title": "CHEM 201 exam 2",
+      "due": "2026-11-21",
+      "dueTime": "10:00",
+      "weekday": "Sat",
+      "dayOffset": 4,
+      "priority": "high",
+      "done": false,
+      "overdue": false,
+      "notes": "Covers chapters 7 to 11."
+    },
+    {
+      "id": "6964ef62-1a6f-4fc1-aef9-e51dc4288a88",
+      "title": "Long run",
+      "due": "2026-11-22",
+      "dueTime": "08:00",
+      "weekday": "Sun",
+      "dayOffset": 5,
+      "priority": "none",
+      "done": false,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "683857ef-c8ef-4fee-9db5-ea796b797794",
+      "title": "Ask BIO 210 professor for a reference",
+      "due": "2026-11-22",
+      "dueTime": "12:00",
+      "weekday": "Sun",
+      "dayOffset": 5,
+      "priority": "medium",
+      "done": false,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "8c5f3d5d-b758-427b-8a9f-39e0be8f55b4",
+      "title": "Call mom",
+      "due": "2026-11-22",
+      "dueTime": "19:00",
+      "weekday": "Sun",
+      "dayOffset": 5,
+      "priority": "none",
+      "done": false,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "46a2b0ea-5b3e-4ca3-ad4d-5f77d8fc65c4",
+      "title": "ENG 105 essay 2 draft",
+      "due": "2026-11-23",
+      "dueTime": "23:59",
+      "weekday": "Mon",
+      "dayOffset": 6,
+      "priority": "medium",
+      "done": false,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "827f205a-f701-4d71-9c68-16a08f31f3b0",
+      "title": "Climbing gym",
+      "due": "2026-11-24",
+      "dueTime": "18:00",
+      "weekday": "Tue",
+      "dayOffset": 7,
+      "priority": "none",
+      "done": false,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "e209fce8-6419-40f5-8bf7-7602c3bbb232",
+      "title": "Internship cover letter draft",
+      "due": "2026-11-25",
+      "dueTime": "23:59",
+      "weekday": "Wed",
+      "dayOffset": 8,
+      "priority": "medium",
+      "done": false,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "35108b76-d28b-49f9-ad85-5269f9fb0555",
+      "title": "Climbing gym",
+      "due": "2026-11-26",
+      "dueTime": "18:00",
+      "weekday": "Thu",
+      "dayOffset": 9,
+      "priority": "none",
+      "done": false,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "5438cce0-69f9-40e2-9241-c9be9387a2ad",
+      "title": "BIO 210 problem set 4",
+      "due": "2026-11-26",
+      "dueTime": "23:59",
+      "weekday": "Thu",
+      "dayOffset": 9,
+      "priority": "high",
+      "done": false,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "3e542f42-a585-473e-98ab-145fe272625c",
+      "title": "Long run",
+      "due": "2026-11-29",
+      "dueTime": "08:00",
+      "weekday": "Sun",
+      "dayOffset": 12,
+      "priority": "none",
+      "done": false,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "6e6e6fff-1e98-4b11-8577-f7fae0c1d68c",
+      "title": "Call mom",
+      "due": "2026-11-29",
+      "dueTime": "19:00",
+      "weekday": "Sun",
+      "dayOffset": 12,
+      "priority": "none",
+      "done": false,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "077b2eca-a40f-46d3-803f-a188ca12ad7d",
+      "title": "Internship application due",
+      "due": "2026-11-29",
+      "dueTime": "23:59",
+      "weekday": "Sun",
+      "dayOffset": 12,
+      "priority": "high",
+      "done": false,
+      "overdue": false,
+      "notes": "Summer research internship. Resume, cover letter, unofficial transcript, one reference."
+    },
+    {
+      "id": "9677d874-612b-4c5c-9443-c9e15d4a15e3",
+      "title": "ENG 105 essay 2 final",
+      "due": "2026-11-30",
+      "dueTime": "23:59",
+      "weekday": "Mon",
+      "dayOffset": 13,
+      "priority": "high",
+      "done": false,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "7cd5b249-d7c7-4f02-aef2-447e9a1911b6",
+      "title": "Climbing gym",
+      "due": "2026-12-01",
+      "dueTime": "18:00",
+      "weekday": "Tue",
+      "dayOffset": 14,
+      "priority": "none",
+      "done": false,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "22385edd-937c-4362-ae49-d06099310aa6",
+      "title": "Look into summer research labs on campus",
+      "due": null,
+      "dueTime": null,
+      "weekday": null,
+      "dayOffset": null,
+      "priority": "none",
+      "done": false,
+      "overdue": false,
+      "notes": "Ecology and microbiology groups first."
+    },
+    {
+      "id": "23baf3ea-3836-4c90-bad1-cade3f192c5d",
+      "title": "Replace chalk bag",
+      "due": null,
+      "dueTime": null,
+      "weekday": null,
+      "dayOffset": null,
+      "priority": "none",
+      "done": false,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "7ed391fe-0402-411c-b274-b33b07022cf7",
+      "title": "Plan a weekend trip home",
+      "due": null,
+      "dueTime": null,
+      "weekday": null,
+      "dayOffset": null,
+      "priority": "none",
+      "done": false,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "dd1513c7-afa5-4b9e-8270-db80d5f412eb",
+      "title": "Fix bike brakes",
+      "due": null,
+      "dueTime": null,
+      "weekday": null,
+      "dayOffset": null,
+      "priority": "none",
+      "done": false,
+      "overdue": false,
+      "notes": null
+    },
+    {
+      "id": "8e84e799-03b2-48a3-b32b-33e3962b99d1",
+      "title": "Return library books",
+      "due": null,
+      "dueTime": null,
+      "weekday": null,
+      "dayOffset": null,
+      "priority": "none",
+      "done": true,
+      "overdue": false,
+      "notes": null
+    }
+  ],
+  "moods": [
+    {
+      "date": "2026-10-06",
+      "weekday": "Tue",
+      "dayOffset": -42,
+      "valence": 0.76,
+      "arousal": 0.71,
+      "topEmotions": [
+        "joy",
+        "excitement"
+      ],
+      "entryCount": 1
+    },
+    {
+      "date": "2026-10-08",
+      "weekday": "Thu",
+      "dayOffset": -40,
+      "valence": 0.39,
+      "arousal": -0.46,
+      "topEmotions": [
+        "calm",
+        "contentment"
+      ],
+      "entryCount": 1
+    },
+    {
+      "date": "2026-10-09",
+      "weekday": "Fri",
+      "dayOffset": -39,
+      "valence": 0.42,
+      "arousal": 0.08,
+      "topEmotions": [
+        "contentment",
+        "anticipation"
+      ],
+      "entryCount": 1
+    },
+    {
+      "date": "2026-10-11",
+      "weekday": "Sun",
+      "dayOffset": -37,
+      "valence": 0.62,
+      "arousal": -0.06,
+      "topEmotions": [
+        "peace",
+        "joy"
+      ],
+      "entryCount": 1
+    },
+    {
+      "date": "2026-10-12",
+      "weekday": "Mon",
+      "dayOffset": -36,
+      "valence": 0.14,
+      "arousal": -0.59,
+      "topEmotions": [
+        "apathy",
+        "calm",
+        "contentment"
+      ],
+      "entryCount": 1
+    },
+    {
+      "date": "2026-10-13",
+      "weekday": "Tue",
+      "dayOffset": -35,
+      "valence": 0.72,
+      "arousal": 0.44,
+      "topEmotions": [
+        "joy",
+        "trust"
+      ],
+      "entryCount": 1
+    },
+    {
+      "date": "2026-10-15",
+      "weekday": "Thu",
+      "dayOffset": -33,
+      "valence": 0.75,
+      "arousal": 0.55,
+      "topEmotions": [
+        "pride",
+        "joy"
+      ],
+      "entryCount": 1
+    },
+    {
+      "date": "2026-10-18",
+      "weekday": "Sun",
+      "dayOffset": -30,
+      "valence": 0.76,
+      "arousal": 0.56,
+      "topEmotions": [
+        "joy",
+        "pride"
+      ],
+      "entryCount": 1
+    },
+    {
+      "date": "2026-10-20",
+      "weekday": "Tue",
+      "dayOffset": -28,
+      "valence": 0.34,
+      "arousal": -0.52,
+      "topEmotions": [
+        "calm",
+        "relaxation"
+      ],
+      "entryCount": 1
+    },
+    {
+      "date": "2026-10-21",
+      "weekday": "Wed",
+      "dayOffset": -27,
+      "valence": -0.07,
+      "arousal": 0.73,
+      "topEmotions": [
+        "stress",
+        "anticipation"
+      ],
+      "entryCount": 1
+    },
+    {
+      "date": "2026-10-22",
+      "weekday": "Thu",
+      "dayOffset": -26,
+      "valence": 0.75,
+      "arousal": 0.76,
+      "topEmotions": [
+        "excitement",
+        "joy"
+      ],
+      "entryCount": 1
+    },
+    {
+      "date": "2026-10-24",
+      "weekday": "Sat",
+      "dayOffset": -24,
+      "valence": -0.46,
+      "arousal": 0.72,
+      "topEmotions": [
+        "anxiety",
+        "stress"
+      ],
+      "entryCount": 1
+    },
+    {
+      "date": "2026-10-25",
+      "weekday": "Sun",
+      "dayOffset": -23,
+      "valence": -0.45,
+      "arousal": 0.7,
+      "topEmotions": [
+        "stress",
+        "anxiety",
+        "frustration"
+      ],
+      "entryCount": 1
+    },
+    {
+      "date": "2026-10-26",
+      "weekday": "Mon",
+      "dayOffset": -22,
+      "valence": -0.23,
+      "arousal": 0.7,
+      "topEmotions": [
+        "anxiety",
+        "anticipation"
+      ],
+      "entryCount": 1
+    },
+    {
+      "date": "2026-10-27",
+      "weekday": "Tue",
+      "dayOffset": -21,
+      "valence": 0.39,
+      "arousal": -0.15,
+      "topEmotions": [
+        "relaxation",
+        "apathy",
+        "joy"
+      ],
+      "entryCount": 1
+    },
+    {
+      "date": "2026-10-28",
+      "weekday": "Wed",
+      "dayOffset": -20,
+      "valence": 0.41,
+      "arousal": -0.44,
+      "topEmotions": [
+        "contentment",
+        "calm"
+      ],
+      "entryCount": 1
+    },
+    {
+      "date": "2026-10-29",
+      "weekday": "Thu",
+      "dayOffset": -19,
+      "valence": 0.42,
+      "arousal": -0.42,
+      "topEmotions": [
+        "contentment",
+        "calm"
+      ],
+      "entryCount": 1
+    },
+    {
+      "date": "2026-10-30",
+      "weekday": "Fri",
+      "dayOffset": -18,
+      "valence": 0.71,
+      "arousal": 0.42,
+      "topEmotions": [
+        "joy",
+        "trust"
+      ],
+      "entryCount": 1
+    },
+    {
+      "date": "2026-11-01",
+      "weekday": "Sun",
+      "dayOffset": -16,
+      "valence": 0.39,
+      "arousal": -0.46,
+      "topEmotions": [
+        "calm",
+        "contentment"
+      ],
+      "entryCount": 1
+    },
+    {
+      "date": "2026-11-02",
+      "weekday": "Mon",
+      "dayOffset": -15,
+      "valence": 0.41,
+      "arousal": -0.43,
+      "topEmotions": [
+        "contentment",
+        "calm"
+      ],
+      "entryCount": 1
+    },
+    {
+      "date": "2026-11-03",
+      "weekday": "Tue",
+      "dayOffset": -14,
+      "valence": 0.76,
+      "arousal": 0.56,
+      "topEmotions": [
+        "joy",
+        "pride"
+      ],
+      "entryCount": 1
+    },
+    {
+      "date": "2026-11-05",
+      "weekday": "Thu",
+      "dayOffset": -12,
+      "valence": 0.52,
+      "arousal": -0.07,
+      "topEmotions": [
+        "calm",
+        "joy"
+      ],
+      "entryCount": 1
+    },
+    {
+      "date": "2026-11-07",
+      "weekday": "Sat",
+      "dayOffset": -10,
+      "valence": -0.56,
+      "arousal": -0.35,
+      "topEmotions": [
+        "sadness",
+        "apathy",
+        "guilt"
+      ],
+      "entryCount": 1
+    },
+    {
+      "date": "2026-11-08",
+      "weekday": "Sun",
+      "dayOffset": -9,
+      "valence": -0.54,
+      "arousal": 0.53,
+      "topEmotions": [
+        "anger",
+        "frustration",
+        "sadness"
+      ],
+      "entryCount": 1
+    },
+    {
+      "date": "2026-11-09",
+      "weekday": "Mon",
+      "dayOffset": -8,
+      "valence": -0.45,
+      "arousal": -0.69,
+      "topEmotions": [
+        "apathy",
+        "sadness"
+      ],
+      "entryCount": 1
+    },
+    {
+      "date": "2026-11-10",
+      "weekday": "Tue",
+      "dayOffset": -7,
+      "valence": 0.4,
+      "arousal": -0.35,
+      "topEmotions": [
+        "calm",
+        "relaxation",
+        "trust"
+      ],
+      "entryCount": 1
+    },
+    {
+      "date": "2026-11-11",
+      "weekday": "Wed",
+      "dayOffset": -6,
+      "valence": -0.31,
+      "arousal": 0.41,
+      "topEmotions": [
+        "confusion",
+        "frustration"
+      ],
+      "entryCount": 1
+    },
+    {
+      "date": "2026-11-12",
+      "weekday": "Thu",
+      "dayOffset": -5,
+      "valence": 0.76,
+      "arousal": 0.71,
+      "topEmotions": [
+        "joy",
+        "excitement"
+      ],
+      "entryCount": 1
+    },
+    {
+      "date": "2026-11-14",
+      "weekday": "Sat",
+      "dayOffset": -3,
+      "valence": -0.38,
+      "arousal": 0.07,
+      "topEmotions": [
+        "apathy",
+        "frustration",
+        "stress"
+      ],
+      "entryCount": 1
+    },
+    {
+      "date": "2026-11-15",
+      "weekday": "Sun",
+      "dayOffset": -2,
+      "valence": 0.36,
+      "arousal": 0.29,
+      "topEmotions": [
+        "pride",
+        "anxiety",
+        "relaxation"
+      ],
+      "entryCount": 1
+    },
+    {
+      "date": "2026-11-16",
+      "weekday": "Mon",
+      "dayOffset": -1,
+      "valence": -0.07,
+      "arousal": 0.4,
+      "topEmotions": [
+        "anxiety",
+        "anticipation",
+        "calm"
+      ],
+      "entryCount": 1
+    },
+    {
+      "date": "2026-11-17",
+      "weekday": "Tue",
+      "dayOffset": 0,
+      "valence": 0.02,
+      "arousal": 0.45,
+      "topEmotions": [
+        "anxiety",
+        "anticipation",
+        "contentment"
+      ],
+      "entryCount": 1
+    }
+  ],
+  "entries": [
+    {
+      "id": "4d415941-0000-4000-8000-000000000058",
+      "date": "2026-10-06",
+      "time": "21:30",
+      "dayOffset": -42,
+      "emotion": "joy",
+      "valence": 0.76,
+      "arousal": 0.71,
+      "hasSongs": true,
+      "hasDrawing": true
+    },
+    {
+      "id": "4d415941-0000-4000-8000-000000000060",
+      "date": "2026-10-08",
+      "time": "21:45",
+      "dayOffset": -40,
+      "emotion": "calm",
+      "valence": 0.39,
+      "arousal": -0.46,
+      "hasSongs": true,
+      "hasDrawing": false
+    },
+    {
+      "id": "4d415941-0000-4000-8000-000000000061",
+      "date": "2026-10-09",
+      "time": "22:10",
+      "dayOffset": -39,
+      "emotion": "contentment",
+      "valence": 0.42,
+      "arousal": 0.08,
+      "hasSongs": true,
+      "hasDrawing": false
+    },
+    {
+      "id": "4d415941-0000-4000-8000-000000000063",
+      "date": "2026-10-11",
+      "time": "11:15",
+      "dayOffset": -37,
+      "emotion": "peace",
+      "valence": 0.62,
+      "arousal": -0.06,
+      "hasSongs": true,
+      "hasDrawing": false
+    },
+    {
+      "id": "4d415941-0000-4000-8000-000000000064",
+      "date": "2026-10-12",
+      "time": "22:35",
+      "dayOffset": -36,
+      "emotion": "apathy",
+      "valence": 0.14,
+      "arousal": -0.59,
+      "hasSongs": false,
+      "hasDrawing": false
+    },
+    {
+      "id": "4d415941-0000-4000-8000-000000000065",
+      "date": "2026-10-13",
+      "time": "21:20",
+      "dayOffset": -35,
+      "emotion": "joy",
+      "valence": 0.72,
+      "arousal": 0.44,
+      "hasSongs": true,
+      "hasDrawing": false
+    },
+    {
+      "id": "4d415941-0000-4000-8000-000000000067",
+      "date": "2026-10-15",
+      "time": "21:35",
+      "dayOffset": -33,
+      "emotion": "pride",
+      "valence": 0.75,
+      "arousal": 0.55,
+      "hasSongs": true,
+      "hasDrawing": false
+    },
+    {
+      "id": "4d415941-0000-4000-8000-000000000070",
+      "date": "2026-10-18",
+      "time": "11:40",
+      "dayOffset": -30,
+      "emotion": "joy",
+      "valence": 0.76,
+      "arousal": 0.56,
+      "hasSongs": true,
+      "hasDrawing": false
+    },
+    {
+      "id": "4d415941-0000-4000-8000-000000000072",
+      "date": "2026-10-20",
+      "time": "21:50",
+      "dayOffset": -28,
+      "emotion": "calm",
+      "valence": 0.34,
+      "arousal": -0.52,
+      "hasSongs": true,
+      "hasDrawing": false
+    },
+    {
+      "id": "4d415941-0000-4000-8000-000000000073",
+      "date": "2026-10-21",
+      "time": "23:00",
+      "dayOffset": -27,
+      "emotion": "stress",
+      "valence": -0.07,
+      "arousal": 0.73,
+      "hasSongs": true,
+      "hasDrawing": false
+    },
+    {
+      "id": "4d415941-0000-4000-8000-000000000074",
+      "date": "2026-10-22",
+      "time": "21:25",
+      "dayOffset": -26,
+      "emotion": "excitement",
+      "valence": 0.75,
+      "arousal": 0.76,
+      "hasSongs": true,
+      "hasDrawing": false
+    },
+    {
+      "id": "4d415941-0000-4000-8000-000000000076",
+      "date": "2026-10-24",
+      "time": "21:40",
+      "dayOffset": -24,
+      "emotion": "anxiety",
+      "valence": -0.46,
+      "arousal": 0.72,
+      "hasSongs": true,
+      "hasDrawing": false
+    },
+    {
+      "id": "4d415941-0000-4000-8000-000000000077",
+      "date": "2026-10-25",
+      "time": "23:05",
+      "dayOffset": -23,
+      "emotion": "stress",
+      "valence": -0.45,
+      "arousal": 0.7,
+      "hasSongs": true,
+      "hasDrawing": false
+    },
+    {
+      "id": "4d415941-0000-4000-8000-000000000078",
+      "date": "2026-10-26",
+      "time": "22:30",
+      "dayOffset": -22,
+      "emotion": "anxiety",
+      "valence": -0.23,
+      "arousal": 0.7,
+      "hasSongs": true,
+      "hasDrawing": false
+    },
+    {
+      "id": "4d415941-0000-4000-8000-000000000079",
+      "date": "2026-10-27",
+      "time": "18:20",
+      "dayOffset": -21,
+      "emotion": "relaxation",
+      "valence": 0.39,
+      "arousal": -0.15,
+      "hasSongs": true,
+      "hasDrawing": false
+    },
+    {
+      "id": "4d415941-0000-4000-8000-000000000080",
+      "date": "2026-10-28",
+      "time": "10:30",
+      "dayOffset": -20,
+      "emotion": "contentment",
+      "valence": 0.41,
+      "arousal": -0.44,
+      "hasSongs": true,
+      "hasDrawing": false
+    },
+    {
+      "id": "4d415941-0000-4000-8000-000000000081",
+      "date": "2026-10-29",
+      "time": "21:40",
+      "dayOffset": -19,
+      "emotion": "contentment",
+      "valence": 0.42,
+      "arousal": -0.42,
+      "hasSongs": true,
+      "hasDrawing": false
+    },
+    {
+      "id": "4d415941-0000-4000-8000-000000000082",
+      "date": "2026-10-30",
+      "time": "21:55",
+      "dayOffset": -18,
+      "emotion": "joy",
+      "valence": 0.71,
+      "arousal": 0.42,
+      "hasSongs": true,
+      "hasDrawing": false
+    },
+    {
+      "id": "4d415941-0000-4000-8000-000000000084",
+      "date": "2026-11-01",
+      "time": "10:50",
+      "dayOffset": -16,
+      "emotion": "calm",
+      "valence": 0.39,
+      "arousal": -0.46,
+      "hasSongs": false,
+      "hasDrawing": false
+    },
+    {
+      "id": "4d415941-0000-4000-8000-000000000085",
+      "date": "2026-11-02",
+      "time": "22:20",
+      "dayOffset": -15,
+      "emotion": "contentment",
+      "valence": 0.41,
+      "arousal": -0.43,
+      "hasSongs": true,
+      "hasDrawing": false
+    },
+    {
+      "id": "4d415941-0000-4000-8000-000000000086",
+      "date": "2026-11-03",
+      "time": "21:30",
+      "dayOffset": -14,
+      "emotion": "joy",
+      "valence": 0.76,
+      "arousal": 0.56,
+      "hasSongs": true,
+      "hasDrawing": false
+    },
+    {
+      "id": "4d415941-0000-4000-8000-000000000088",
+      "date": "2026-11-05",
+      "time": "21:15",
+      "dayOffset": -12,
+      "emotion": "calm",
+      "valence": 0.52,
+      "arousal": -0.07,
+      "hasSongs": true,
+      "hasDrawing": false
+    },
+    {
+      "id": "4d415941-0000-4000-8000-000000000090",
+      "date": "2026-11-07",
+      "time": "23:20",
+      "dayOffset": -10,
+      "emotion": "sadness",
+      "valence": -0.56,
+      "arousal": -0.35,
+      "hasSongs": true,
+      "hasDrawing": false
+    },
+    {
+      "id": "4d415941-0000-4000-8000-000000000091",
+      "date": "2026-11-08",
+      "time": "21:50",
+      "dayOffset": -9,
+      "emotion": "anger",
+      "valence": -0.54,
+      "arousal": 0.53,
+      "hasSongs": true,
+      "hasDrawing": false
+    },
+    {
+      "id": "4d415941-0000-4000-8000-000000000092",
+      "date": "2026-11-09",
+      "time": "21:10",
+      "dayOffset": -8,
+      "emotion": "apathy",
+      "valence": -0.45,
+      "arousal": -0.69,
+      "hasSongs": true,
+      "hasDrawing": false
+    },
+    {
+      "id": "4d415941-0000-4000-8000-000000000093",
+      "date": "2026-11-10",
+      "time": "22:00",
+      "dayOffset": -7,
+      "emotion": "calm",
+      "valence": 0.4,
+      "arousal": -0.35,
+      "hasSongs": true,
+      "hasDrawing": true
+    },
+    {
+      "id": "4d415941-0000-4000-8000-000000000094",
+      "date": "2026-11-11",
+      "time": "22:45",
+      "dayOffset": -6,
+      "emotion": "confusion",
+      "valence": -0.31,
+      "arousal": 0.41,
+      "hasSongs": false,
+      "hasDrawing": false
+    },
+    {
+      "id": "4d415941-0000-4000-8000-000000000095",
+      "date": "2026-11-12",
+      "time": "21:30",
+      "dayOffset": -5,
+      "emotion": "joy",
+      "valence": 0.76,
+      "arousal": 0.71,
+      "hasSongs": true,
+      "hasDrawing": true
+    },
+    {
+      "id": "4d415941-0000-4000-8000-000000000097",
+      "date": "2026-11-14",
+      "time": "23:55",
+      "dayOffset": -3,
+      "emotion": "apathy",
+      "valence": -0.38,
+      "arousal": 0.07,
+      "hasSongs": true,
+      "hasDrawing": false
+    },
+    {
+      "id": "4d415941-0000-4000-8000-000000000098",
+      "date": "2026-11-15",
+      "time": "20:15",
+      "dayOffset": -2,
+      "emotion": "pride",
+      "valence": 0.36,
+      "arousal": 0.29,
+      "hasSongs": true,
+      "hasDrawing": false
+    },
+    {
+      "id": "4d415941-0000-4000-8000-000000000099",
+      "date": "2026-11-16",
+      "time": "22:25",
+      "dayOffset": -1,
+      "emotion": "anxiety",
+      "valence": -0.07,
+      "arousal": 0.4,
+      "hasSongs": true,
+      "hasDrawing": false
+    },
+    {
+      "id": "4d415941-0000-4000-8000-000000000100",
+      "date": "2026-11-17",
+      "time": "08:40",
+      "dayOffset": 0,
+      "emotion": "anxiety",
+      "valence": 0.02,
+      "arousal": 0.45,
+      "hasSongs": true,
+      "hasDrawing": false
+    }
+  ],
+  "songs": [
+    {
+      "date": "2026-10-06",
+      "dayOffset": -42,
+      "entryId": "4d415941-0000-4000-8000-000000000058",
+      "title": "Electric Feel",
+      "artist": "MGMT",
+      "pickedBy": "maya"
+    },
+    {
+      "date": "2026-10-08",
+      "dayOffset": -40,
+      "entryId": "4d415941-0000-4000-8000-000000000060",
+      "title": "Space Song",
+      "artist": "Beach House",
+      "pickedBy": "maya"
+    },
+    {
+      "date": "2026-10-09",
+      "dayOffset": -39,
+      "entryId": "4d415941-0000-4000-8000-000000000061",
+      "title": "505",
+      "artist": "Arctic Monkeys",
+      "pickedBy": "maya"
+    },
+    {
+      "date": "2026-10-11",
+      "dayOffset": -37,
+      "entryId": "4d415941-0000-4000-8000-000000000063",
+      "title": "Let It Happen",
+      "artist": "Tame Impala",
+      "pickedBy": "maya"
+    },
+    {
+      "date": "2026-10-13",
+      "dayOffset": -35,
+      "entryId": "4d415941-0000-4000-8000-000000000065",
+      "title": "Kids",
+      "artist": "MGMT",
+      "pickedBy": "maya"
+    },
+    {
+      "date": "2026-10-15",
+      "dayOffset": -33,
+      "entryId": "4d415941-0000-4000-8000-000000000067",
+      "title": "Sunflower",
+      "artist": "Rex Orange County",
+      "pickedBy": "maya"
+    },
+    {
+      "date": "2026-10-18",
+      "dayOffset": -30,
+      "entryId": "4d415941-0000-4000-8000-000000000070",
+      "title": "Midnight City",
+      "artist": "M83",
+      "pickedBy": "maya"
+    },
+    {
+      "date": "2026-10-20",
+      "dayOffset": -28,
+      "entryId": "4d415941-0000-4000-8000-000000000072",
+      "title": "Pink + White",
+      "artist": "Frank Ocean",
+      "pickedBy": "maya"
+    },
+    {
+      "date": "2026-10-21",
+      "dayOffset": -27,
+      "entryId": "4d415941-0000-4000-8000-000000000073",
+      "title": "Feels Like We Only Go Backwards",
+      "artist": "Tame Impala",
+      "pickedBy": "maya"
+    },
+    {
+      "date": "2026-10-22",
+      "dayOffset": -26,
+      "entryId": "4d415941-0000-4000-8000-000000000074",
+      "title": "Walking On a Dream",
+      "artist": "Empire of the Sun",
+      "pickedBy": "maya"
+    },
+    {
+      "date": "2026-10-24",
+      "dayOffset": -24,
+      "entryId": "4d415941-0000-4000-8000-000000000076",
+      "title": "Under Pressure",
+      "artist": "Queen",
+      "pickedBy": "maya"
+    },
+    {
+      "date": "2026-10-25",
+      "dayOffset": -23,
+      "entryId": "4d415941-0000-4000-8000-000000000077",
+      "title": "Stressed Out",
+      "artist": "Twenty One Pilots",
+      "pickedBy": "maya"
+    },
+    {
+      "date": "2026-10-26",
+      "dayOffset": -22,
+      "entryId": "4d415941-0000-4000-8000-000000000078",
+      "title": "Weightless",
+      "artist": "Marconi Union",
+      "pickedBy": "maya"
+    },
+    {
+      "date": "2026-10-27",
+      "dayOffset": -21,
+      "entryId": "4d415941-0000-4000-8000-000000000079",
+      "title": "Dog Days Are Over",
+      "artist": "Florence + The Machine",
+      "pickedBy": "maya"
+    },
+    {
+      "date": "2026-10-28",
+      "dayOffset": -20,
+      "entryId": "4d415941-0000-4000-8000-000000000080",
+      "title": "Banana Pancakes",
+      "artist": "Jack Johnson",
+      "pickedBy": "maya"
+    },
+    {
+      "date": "2026-10-29",
+      "dayOffset": -19,
+      "entryId": "4d415941-0000-4000-8000-000000000081",
+      "title": "Cherry Wine",
+      "artist": "Hozier",
+      "pickedBy": "maya"
+    },
+    {
+      "date": "2026-10-30",
+      "dayOffset": -18,
+      "entryId": "4d415941-0000-4000-8000-000000000082",
+      "title": "Stick Season",
+      "artist": "Noah Kahan",
+      "pickedBy": "maya"
+    },
+    {
+      "date": "2026-11-02",
+      "dayOffset": -15,
+      "entryId": "4d415941-0000-4000-8000-000000000085",
+      "title": "Landslide",
+      "artist": "Fleetwood Mac",
+      "pickedBy": "maya"
+    },
+    {
+      "date": "2026-11-03",
+      "dayOffset": -14,
+      "entryId": "4d415941-0000-4000-8000-000000000086",
+      "title": "Heat Waves",
+      "artist": "Glass Animals",
+      "pickedBy": "maya"
+    },
+    {
+      "date": "2026-11-05",
+      "dayOffset": -12,
+      "entryId": "4d415941-0000-4000-8000-000000000088",
+      "title": "Riptide",
+      "artist": "Vance Joy",
+      "pickedBy": "maya"
+    },
+    {
+      "date": "2026-11-07",
+      "dayOffset": -10,
+      "entryId": "4d415941-0000-4000-8000-000000000090",
+      "title": "Liability",
+      "artist": "Lorde",
+      "pickedBy": "maya"
+    },
+    {
+      "date": "2026-11-08",
+      "dayOffset": -9,
+      "entryId": "4d415941-0000-4000-8000-000000000091",
+      "title": "Motion Sickness",
+      "artist": "Phoebe Bridgers",
+      "pickedBy": "maya"
+    },
+    {
+      "date": "2026-11-09",
+      "dayOffset": -8,
+      "entryId": "4d415941-0000-4000-8000-000000000092",
+      "title": "Holocene",
+      "artist": "Bon Iver",
+      "pickedBy": "maya"
+    },
+    {
+      "date": "2026-11-10",
+      "dayOffset": -7,
+      "entryId": "4d415941-0000-4000-8000-000000000093",
+      "title": "Put Your Records On",
+      "artist": "Corinne Bailey Rae",
+      "pickedBy": "maya"
+    },
+    {
+      "date": "2026-11-12",
+      "dayOffset": -5,
+      "entryId": "4d415941-0000-4000-8000-000000000095",
+      "title": "Electric Feel",
+      "artist": "MGMT",
+      "pickedBy": "maya"
+    },
+    {
+      "date": "2026-11-14",
+      "dayOffset": -3,
+      "entryId": "4d415941-0000-4000-8000-000000000097",
+      "title": "Retrograde",
+      "artist": "James Blake",
+      "pickedBy": "maya"
+    },
+    {
+      "date": "2026-11-15",
+      "dayOffset": -2,
+      "entryId": "4d415941-0000-4000-8000-000000000098",
+      "title": "Good Days",
+      "artist": "SZA",
+      "pickedBy": "maya"
+    },
+    {
+      "date": "2026-11-16",
+      "dayOffset": -1,
+      "entryId": "4d415941-0000-4000-8000-000000000099",
+      "title": "Bags",
+      "artist": "Clairo",
+      "pickedBy": "maya"
+    },
+    {
+      "date": "2026-11-17",
+      "dayOffset": 0,
+      "entryId": "4d415941-0000-4000-8000-000000000100",
+      "title": "Coffee",
+      "artist": "beabadoobee",
+      "pickedBy": "maya"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "2dood-demo": {
+      "command": "npx",
+      "args": ["-y", "2dood-mcp", "--demo"]
+    },
+    "nocturne-demo": {
+      "command": "npx",
+      "args": ["-y", "nocturne-mcp", "--demo"]
+    }
+  }
+}

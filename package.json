@@ -1,0 +1,27 @@
+{
+  "name": "melomed-hack-starter",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Hackathon starter for building on the 2DooD and Nocturne MCP servers in demo mode",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "week": "tsx examples/01-week-overview.ts",
+    "stress": "tsx examples/02-stress-vs-deadlines.ts",
+    "agent": "tsx examples/03-claude-agent.ts",
+    "check": "tsc --noEmit",
+    "export-json": "tsx scripts/export-json.ts"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.6.0",
+    "@modelcontextprotocol/sdk": "^1.32.2"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}

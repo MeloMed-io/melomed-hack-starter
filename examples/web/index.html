@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maya's week: tasks and mood</title>
+  <style>
+    :root { --bg: #faf8f5; --card: #fff; --ink: #222; --muted: #777; --line: #e8e3dc; --good: #3a8f6b; --low: #c0573e; --accent: #5b5bd6; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); }
+    main { max-width: 760px; margin: 0 auto; padding: 32px 20px 64px; }
+    h1 { font-size: 22px; margin: 0 0 4px; }
+    .sub { color: var(--muted); margin: 0 0 20px; }
+    .controls { display: flex; gap: 8px; margin-bottom: 16px; }
+    button { font: inherit; padding: 6px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--card); cursor: pointer; }
+    button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); }
+    .day { display: grid; grid-template-columns: 120px 1fr 1fr; gap: 16px; padding: 12px 14px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; margin-bottom: 8px; }
+    .day.today { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+    .date { font-weight: 600; }
+    .date small { display: block; font-weight: 400; color: var(--muted); }
+    .mood .bar { height: 6px; border-radius: 3px; background: var(--line); position: relative; margin: 6px 0 4px; }
+    .mood .bar span { position: absolute; top: 0; height: 6px; border-radius: 3px; }
+    .mood .labels { color: var(--muted); font-size: 13px; }
+    .empty { color: var(--muted); font-size: 13px; }
+    ul { list-style: none; margin: 0; padding: 0; }
+    li { margin: 2px 0; }
+    li.done { color: var(--muted); text-decoration: line-through; }
+    li.overdue::after { content: " missed"; color: var(--low); font-size: 12px; }
+    .high { color: var(--low); font-weight: 600; }
+    footer { color: var(--muted); font-size: 13px; margin-top: 24px; }
+    #error { color: var(--low); }
+    @media (max-width: 560px) { .day { grid-template-columns: 1fr; gap: 6px; } }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Maya's week</h1>
+  <p class="sub" id="sub">Loading maya.json...</p>
+  <div class="controls">
+    <button id="near" aria-pressed="true">Last 7 days and next 7</button>
+    <button id="all" aria-pressed="false">Everything</button>
+  </div>
+  <p id="error"></p>
+  <div id="days"></div>
+  <footer>
+    Maya Chen is fictional demo data. Mood is an automatic read of journal writing, from -1 (unpleasant) to 1 (pleasant).
+    It is a pattern to look at, not a diagnosis.
+  </footer>
+</main>
+<script>
+  // Where to load the data from. Change this to the hosted maya.json link,
+  // or pass ?src=<url> in the address bar.
+  const DATA_URL = new URLSearchParams(location.search).get('src') || '../../public/maya.json';
+
+  let data = null;
+  let range = 'near';
+
+  function addDays(ymd, n) {
+    const d = new Date(ymd + 'T12:00:00Z');
+    d.setUTCDate(d.getUTCDate() + n);
+    return d.toISOString().slice(0, 10);
+  }
+
+  function el(tag, props = {}, children = []) {
+    const node = document.createElement(tag);
+    Object.assign(node, props);
+    for (const c of [].concat(children)) node.append(c);
+    return node;
+  }
+
+  function moodCell(mood) {
+    if (!mood) return el('div', { className: 'mood empty', textContent: 'No journal entry' });
+    // Bar grows from the middle: right and green for pleasant, left and red for unpleasant.
+    const v = mood.valence;
+    const fill = el('span');
+    fill.style.left = v >= 0 ? '50%' : (50 + v * 50) + '%';
+    fill.style.width = Math.abs(v) * 50 + '%';
+    fill.style.background = v >= 0 ? 'var(--good)' : 'var(--low)';
+    return el('div', { className: 'mood' }, [
+      el('div', { textContent: 'Mood ' + (v >= 0 ? '+' : '') + v.toFixed(2) }),
+      el('div', { className: 'bar' }, fill),
+      el('div', { className: 'labels', textContent: mood.topEmotions.join(', ') }),
+    ]);
+  }
+
+  function tasksCell(tasks) {
+    if (!tasks.length) return el('div', { className: 'empty', textContent: 'Nothing due' });
+    return el('ul', {}, tasks.map((t) => el('li', {
+      className: [t.done ? 'done' : '', t.overdue ? 'overdue' : ''].join(' ').trim(),
+    }, [
+      t.priority === 'high' ? el('span', { className: 'high', textContent: '! ' }) : '',
+      t.title,
+      t.dueTime && t.dueTime !== '23:59' ? el('span', { className: 'empty', textContent: ' ' + t.dueTime }) : '',
+    ])));
+  }
+
+  function render() {
+    const days = document.getElementById('days');
+    days.replaceChildren();
+    const dated = data.tasks.filter((t) => t.due);
+    const allDates = [...dated.map((t) => t.due), ...data.moods.map((m) => m.date)].sort();
+    const from = range === 'near' ? addDays(data.today, -6) : allDates[0];
+    const to = range === 'near' ? addDays(data.today, 7) : allDates[allDates.length - 1];
+    const moodByDate = new Map(data.moods.map((m) => [m.date, m]));
+
+    for (let d = from; d <= to; d = addDays(d, 1)) {
+      const label = new Date(d + 'T12:00:00Z').toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', timeZone: 'UTC' });
+      const isToday = d === data.today;
+      const isFuture = d > data.today;
+      days.append(el('div', { className: 'day' + (isToday ? ' today' : '') }, [
+        el('div', { className: 'date' }, [label, el('small', { textContent: isToday ? 'today' : isFuture ? 'ahead' : '' })]),
+        isFuture ? el('div', { className: 'mood empty', textContent: 'Not written yet' }) : moodCell(moodByDate.get(d)),
+        tasksCell(dated.filter((t) => t.due === d)),
+      ]));
+    }
+  }
+
+  function setRange(r) {
+    range = r;
+    document.getElementById('near').setAttribute('aria-pressed', String(r === 'near'));
+    document.getElementById('all').setAttribute('aria-pressed', String(r === 'all'));
+    render();
+  }
+  document.getElementById('near').onclick = () => setRange('near');
+  document.getElementById('all').onclick = () => setRange('all');
+
+  fetch(DATA_URL)
+    .then((r) => { if (!r.ok) throw new Error(r.status + ' ' + r.statusText); return r.json(); })
+    .then((json) => {
+      data = json;
+      document.getElementById('sub').textContent =
+        data.person.name + ', today is ' + data.today + '. ' + data.tasks.length + ' tasks, ' + data.moods.length + ' days with a journal entry.';
+      render();
+    })
+    .catch((e) => {
+      document.getElementById('sub').textContent = '';
+      document.getElementById('error').textContent = 'Could not load ' + DATA_URL + ' (' + e.message + '). Serve the repo folder, do not open the file directly.';
+    });
+</script>
+</body>
+</html>
