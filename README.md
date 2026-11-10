@@ -249,7 +249,7 @@ Each team can win one prize.
 
 **Grand prize: an AirTag for every member of the winning team** (from WinC).
 
-**MeloMed prize: best use of the 2DooD or Nocturne tools.** A phone stand for every member of the winning team, upgraded to laptop stands if Luma RSVPs reach 40 by Nov 15. Both the JSON link (Path A) and the real MCP servers (Path B) count. Real MCP use gets extra credit.
+**MeloMed prize: best use of the 2DooD or Nocturne tools.** A cute animal phone stand for every member of the winning team. Both the JSON link (Path A) and the real MCP servers (Path B) count. Real MCP use gets extra credit.
 
 How the MeloMed prize is judged:
 
