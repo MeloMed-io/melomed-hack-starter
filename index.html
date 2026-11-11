@@ -34,6 +34,13 @@
     button.copy:focus-visible { outline: 3px solid var(--teal-dark); outline-offset: 2px; }
     button.copy.done { background: var(--ink); color: #fff; }
     pre { margin: 0; background: var(--bg); border-radius: 10px; padding: 14px; font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; white-space: pre-wrap; word-break: break-word; max-height: 180px; overflow: auto; color: var(--ink); }
+    .explain { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; margin: 0 0 24px; }
+    .explain h2 { font-family: "Zodiak", Georgia, serif; font-weight: 400; font-size: 24px; margin: 0 0 8px; }
+    .explain p { margin: 0 0 10px; }
+    .explain p:last-child { margin: 0; }
+    details.faq { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 14px 20px; margin-top: 12px; }
+    details.faq summary { cursor: pointer; font-weight: 600; font-size: 18px; }
+    details.faq p { margin: 10px 0 0; }
     .stuck { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; margin-top: 32px; }
     .stuck p { margin: 0 0 6px; }
     .stuck p:last-child { margin: 0; }
@@ -52,6 +59,13 @@
   <p class="eyebrow">WinC Builder Sprint &middot; sponsored by MeloMed</p>
   <h1>Start here</h1>
   <p class="lede">Build a real app with a week in the life of Maya, a made-up college student. You get her to-do list, her moods and her songs. Nothing to install, no account with us.</p>
+
+  <section class="explain">
+    <h2>What is this?</h2>
+    <p>Most apps don't talk to each other. Your to-do list doesn't know you had a rough day, and your journal doesn't know you have an exam on Friday.</p>
+    <p>So we made a fake student called Maya. Her to-do list and her mood journal live in one link. You paste a prompt with that link into an AI website like v0, describe the app you want in plain English, and it builds it for you. No coding needed.</p>
+    <p>Build something like "show the days Maya was stressed and what was due", or "suggest what she should do first when she's tired". Then turn it into your own idea.</p>
+  </section>
 
   <ol class="steps">
     <li><span class="num">1</span><div><strong>Open v0.dev or Replit</strong><span class="hint">Sign in and start a new project. Both are free to try.</span></div></li>
@@ -131,6 +145,15 @@ Show each song as a card with title, artist, the date and that day&#x27;s topEmo
 Add a button that copies a playlist as plain text, one &quot;title - artist&quot; per line.
 Footer: &quot;Maya Chen is fictional demo data from the MeloMed hack starter.&quot;</pre>
     </section>
+
+  <details class="faq">
+    <summary>What is MCP?</summary>
+    <p>It's a plug that lets AI assistants like Claude or ChatGPT use other apps for you. Instead of copying your to-do list into the chat, the AI can read it or add a task itself. You don't need it tonight. The link above does the same thing the easy way.</p>
+  </details>
+  <details class="faq">
+    <summary>Why does MeloMed care?</summary>
+    <p>We make 2DooD, the to-do app, and Nocturne, the journal app. We want to see what people build when their apps can actually understand each other.</p>
+  </details>
 
   <div class="stuck">
     <p><strong>Stuck?</strong> Raise your hand. Mentors are walking around.</p>
