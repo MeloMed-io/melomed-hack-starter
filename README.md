@@ -9,7 +9,7 @@ Build something with a week in the life of **Maya Chen**, a fictional college so
 
 Maya is fictional. Every name, task and mood here is demo data.
 
-**See it running:** [melomed-io.github.io/melomed-hack-starter/examples/web](https://melomed-io.github.io/melomed-hack-starter/examples/web/) is a small app built on this data. Open it to see what you can make before you start.
+**New here? Start with the [Start here page](https://melomed-io.github.io/melomed-hack-starter/):** three steps and a Copy button for each prompt, no install. **See it running:** [a finished example app](https://melomed-io.github.io/melomed-hack-starter/examples/web/) built on this data.
 
 Sponsor: [MeloMed](https://melomed.io). Developer guide: [melomed.io/developers](https://melomed.io/developers).
 
